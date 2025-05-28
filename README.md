@@ -1,4 +1,4 @@
-# 🔗 PolkaTrace - Supply Chain Transparency dApp
+# PolkaTrace - Supply Chain Transparency dApp
 
 <div align="center">
 
@@ -12,43 +12,43 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.0-cyan?logo=tailwindcss)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[Live Demo](http://localhost:3000) • [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [API](#-api-reference)
+[Live Demo](http://localhost:3000) • [Features](#features) • [Installation](#installation) • [Usage](#usage) • [API](#api-reference)
 
 </div>
 
-## 📖 Overview
+## Overview
 
 PolkaTrace is a decentralized application (dApp) for supply chain transparency built on the Polkadot network. This React-based frontend provides a complete interface for interacting with the PolkaTrace smart contract, enabling end-to-end tracking of products throughout their lifecycle from manufacturing to delivery.
 
-### 🎯 Mission
+### Mission
 
 To create a transparent, immutable, and user-friendly supply chain tracking system that builds trust between manufacturers, distributors, and consumers while combating counterfeiting and ensuring product authenticity.
 
-## ✨ Features
+## Features
 
-### 🔐 Core Functionality
+### Core Functionality
 
-- **📦 Product Registration**: Register new products with detailed metadata
-- **🔍 Product Lookup**: Search and verify product information and history
-- **📝 Event Logging**: Log comprehensive supply chain events (Created, Shipped, In Transit, Received, Inspected, Verified, Delivered)
-- **📋 Product Management**: View and manage owned products
-- **⚙️ Admin Panel**: Manage authorized accounts (admin-only)
+- **Product Registration**: Register new products with detailed metadata
+- **Product Lookup**: Search and verify product information and history
+- **Event Logging**: Log comprehensive supply chain events (Created, Shipped, In Transit, Received, Inspected, Verified, Delivered)
+- **Product Management**: View and manage owned products
+- **Admin Panel**: Manage authorized accounts (admin-only)
 
-### 🔌 Wallet Integration
+### Wallet Integration
 
 - **Seamless Connection**: Polkadot{.js} extension support
 - **Multi-Account**: Manage multiple wallet accounts
 - **Real-time Updates**: Live balance and status displays
 - **Secure Transactions**: Safe blockchain interactions
 
-### 🎨 User Experience
+### User Experience
 
 - **Responsive Design**: Works on all devices
 - **Modern UI**: Clean, professional interface with Tailwind CSS
 - **Real-time Feedback**: Instant status updates and error handling
 - **Intuitive Navigation**: Easy-to-use tabbed interface
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -65,7 +65,7 @@ To create a transparent, immutable, and user-friendly supply chain tracking syst
 - **Substrate** - Blockchain framework compatibility
 - **Ink! Smart Contracts** - Contract interaction
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -100,7 +100,7 @@ To create a transparent, immutable, and user-friendly supply chain tracking syst
 5. **Connect your wallet**
    Click "Connect Wallet" and select your Polkadot account
 
-## 📱 Usage Guide
+## Usage Guide
 
 ### Getting Started
 
@@ -111,7 +111,7 @@ To create a transparent, immutable, and user-friendly supply chain tracking syst
 
 ### Core Operations
 
-#### 📦 Registering Products
+#### Registering Products
 
 1. Navigate to **"Register Product"** tab
 2. Fill in product details:
@@ -120,31 +120,31 @@ To create a transparent, immutable, and user-friendly supply chain tracking syst
    - Initial location
 3. Click **"Register Product"** to submit to blockchain
 
-#### 🔍 Looking Up Products
+#### Looking Up Products
 
 1. Go to **"Product Lookup"** tab
 2. Enter the product ID
 3. View complete product information and history
 
-#### 📝 Logging Events
+#### Logging Events
 
 1. Select **"Log Events"** tab
 2. Enter product ID and select event type
 3. Submit event (requires authorization)
 
-#### 📋 Managing Products
+#### Managing Products
 
 1. Visit **"My Products"** to view owned products
 2. See comprehensive product listings with metadata
 3. Track ownership and event history
 
-#### ⚙️ Admin Functions
+#### Admin Functions
 
 1. Access **"Admin Panel"** (admin accounts only)
 2. Authorize/deauthorize accounts for event logging
 3. Manage system permissions
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 polka-trace-dApp/
@@ -181,7 +181,7 @@ polka-trace-dApp/
 └── README.md
 ```
 
-## 📋 API Reference
+## API Reference
 
 ### Context Methods
 
@@ -218,7 +218,7 @@ enum EventType {
 }
 ```
 
-## 🔧 Development
+## Development
 
 ### Available Scripts
 
@@ -257,7 +257,7 @@ The application includes both mock and real blockchain services:
 
 To switch to real blockchain, update the contract address and endpoint in the Polkadot service configuration.
 
-## 🚀 Deployment
+## Deployment
 
 ### Build for Production
 
@@ -265,73 +265,7 @@ To switch to real blockchain, update the contract address and endpoint in the Po
 npm run build
 ```
 
-### Deploy to Hosting Platform
-
-The app can be deployed to any static hosting service:
-
-- **Vercel**: `vercel --prod`
-- **Netlify**: Deploy the `build` folder
-- **AWS S3**: Upload `build` folder contents
-- **GitHub Pages**: Use `gh-pages` branch
-
-### Environment Variables
-
-For production, configure:
-
-- `REACT_APP_WS_ENDPOINT` - Polkadot node endpoint
-- `REACT_APP_CONTRACT_ADDRESS` - Deployed contract address
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**1. Wallet Connection Fails**
-
-- Ensure Polkadot{.js} extension is installed and enabled
-- Check that you have accounts configured in the extension
-- Verify the website has permission to access the extension
-
-**2. Transaction Failures**
-
-- Confirm you have sufficient balance for transaction fees
-- Verify your account has necessary permissions for the operation
-- Check network connectivity and node status
-
-**3. Build Errors**
-
-- Clear node_modules: `rm -rf node_modules && npm install`
-- Update dependencies: `npm update`
-- Check Node.js version compatibility
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how to get started:
-
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-3. **Make your changes**
-4. **Commit your changes**
-   ```bash
-   git commit -m 'Add amazing feature'
-   ```
-5. **Push to the branch**
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-6. **Open a Pull Request**
-
-### Development Guidelines
-
-- Follow TypeScript best practices
-- Use semantic commit messages
-- Add tests for new features
-- Update documentation as needed
-- Ensure responsive design compatibility
-
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] **Enhanced Analytics** - Advanced supply chain analytics dashboard
 - [ ] **Mobile App** - Native mobile applications
@@ -341,7 +275,7 @@ We welcome contributions! Here's how to get started:
 - [ ] **Export Features** - Data export capabilities
 - [ ] **Integration APIs** - Third-party system integration
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Polkadot Team** - For the amazing blockchain framework
 - **Substrate** - For the development tools
@@ -350,7 +284,7 @@ We welcome contributions! Here's how to get started:
 - **Tailwind CSS** - For the styling system
 - **Open Source Community** - For the incredible tools and libraries
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
@@ -358,10 +292,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**Built with ❤️ for the future of supply chain transparency**
-
-**Powered by Polkadot • Open Source Forever**
-
-[Issues](https://github.com/your-username/polka-trace-dApp/issues) • [Discussions](https://github.com/your-username/polka-trace-dApp/discussions) • [Contributing](CONTRIBUTING.md)
+**Built with care for the future of supply chain transparency**
 
 </div>
