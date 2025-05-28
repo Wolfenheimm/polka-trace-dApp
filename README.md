@@ -12,7 +12,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.0-cyan?logo=tailwindcss)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[Live Demo](http://localhost:3000) • [Features](#features) • [Installation](#installation) • [Usage](#usage) • [API](#api-reference)
+[Live Demo](http://localhost:3000) • [Features](#features) • [Installation](#installation) • [API](#api-reference)
 
 </div>
 
