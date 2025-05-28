@@ -1,0 +1,452 @@
+{
+  "source": {
+    "hash": "0x...",
+    "language": "ink! 4.0.0",
+    "compiler": "rustc 1.69.0",
+    "build_info": {
+      "build_mode": "Release",
+      "cargo_contract_version": "2.0.0",
+      "rust_toolchain": "stable-x86_64-unknown-linux-gnu",
+      "wasm_opt_settings": {
+        "optimization_passes": "Z",
+        "keep_debug_symbols": false
+      }
+    }
+  },
+  "contract": {
+    "name": "polka_trace",
+    "version": "0.1.0",
+    "authors": ["PolkaTrace Team"]
+  },
+  "spec": {
+    "constructors": [
+      {
+        "args": [],
+        "default": false,
+        "docs": ["Constructor that initializes the contract"],
+        "label": "new",
+        "payable": false,
+        "returnType": {
+          "displayName": ["ink_primitives", "ConstructorResult"],
+          "type": 0
+        },
+        "selector": "0x9bae9d5e"
+      }
+    ],
+    "docs": [],
+    "events": [
+      {
+        "args": [
+          {
+            "docs": [],
+            "indexed": true,
+            "label": "product_id",
+            "type": {
+              "displayName": ["u128"],
+              "type": 1
+            }
+          },
+          {
+            "docs": [],
+            "indexed": true,
+            "label": "manufacturer",
+            "type": {
+              "displayName": ["AccountId"],
+              "type": 2
+            }
+          }
+        ],
+        "docs": [],
+        "label": "ProductRegistered"
+      },
+      {
+        "args": [
+          {
+            "docs": [],
+            "indexed": true,
+            "label": "product_id",
+            "type": {
+              "displayName": ["u128"],
+              "type": 1
+            }
+          },
+          {
+            "docs": [],
+            "indexed": false,
+            "label": "event_type",
+            "type": {
+              "displayName": ["EventType"],
+              "type": 3
+            }
+          },
+          {
+            "docs": [],
+            "indexed": true,
+            "label": "actor",
+            "type": {
+              "displayName": ["AccountId"],
+              "type": 2
+            }
+          }
+        ],
+        "docs": [],
+        "label": "LifecycleEventLogged"
+      },
+      {
+        "args": [
+          {
+            "docs": [],
+            "indexed": true,
+            "label": "product_id",
+            "type": {
+              "displayName": ["u128"],
+              "type": 1
+            }
+          },
+          {
+            "docs": [],
+            "indexed": true,
+            "label": "from",
+            "type": {
+              "displayName": ["AccountId"],
+              "type": 2
+            }
+          },
+          {
+            "docs": [],
+            "indexed": true,
+            "label": "to",
+            "type": {
+              "displayName": ["AccountId"],
+              "type": 2
+            }
+          }
+        ],
+        "docs": [],
+        "label": "OwnershipTransferred"
+      }
+    ],
+    "lang_error": {
+      "displayName": ["ink", "LangError"],
+      "type": 4
+    },
+    "messages": [
+      {
+        "args": [
+          {
+            "label": "metadata",
+            "type": {
+              "displayName": ["Vec"],
+              "type": 5
+            }
+          }
+        ],
+        "default": false,
+        "docs": ["Register a new product in the supply chain"],
+        "label": "register_product",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": ["ink", "MessageResult"],
+          "type": 6
+        },
+        "selector": "0x..."
+      },
+      {
+        "args": [
+          {
+            "label": "product_id",
+            "type": {
+              "displayName": ["u128"],
+              "type": 1
+            }
+          },
+          {
+            "label": "event_type",
+            "type": {
+              "displayName": ["EventType"],
+              "type": 3
+            }
+          }
+        ],
+        "default": false,
+        "docs": ["Log a new lifecycle event for a product"],
+        "label": "log_event",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": ["ink", "MessageResult"],
+          "type": 7
+        },
+        "selector": "0x..."
+      },
+      {
+        "args": [
+          {
+            "label": "product_id",
+            "type": {
+              "displayName": ["u128"],
+              "type": 1
+            }
+          }
+        ],
+        "default": false,
+        "docs": ["Verify if a product exists and is authentic"],
+        "label": "verify_product",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": ["bool"],
+          "type": 8
+        },
+        "selector": "0x..."
+      },
+      {
+        "args": [
+          {
+            "label": "product_id",
+            "type": {
+              "displayName": ["u128"],
+              "type": 1
+            }
+          }
+        ],
+        "default": false,
+        "docs": ["Get basic product information"],
+        "label": "get_product",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": ["Option"],
+          "type": 9
+        },
+        "selector": "0x..."
+      },
+      {
+        "args": [
+          {
+            "label": "owner",
+            "type": {
+              "displayName": ["AccountId"],
+              "type": 2
+            }
+          }
+        ],
+        "default": false,
+        "docs": ["Get all product IDs owned by a specific account"],
+        "label": "get_products_by_owner",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": ["Vec"],
+          "type": 10
+        },
+        "selector": "0x..."
+      },
+      {
+        "args": [
+          {
+            "label": "manufacturer",
+            "type": {
+              "displayName": ["AccountId"],
+              "type": 2
+            }
+          }
+        ],
+        "default": false,
+        "docs": ["Get all product IDs manufactured by a specific account"],
+        "label": "get_products_by_manufacturer",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": ["Vec"],
+          "type": 10
+        },
+        "selector": "0x..."
+      },
+      {
+        "args": [
+          {
+            "label": "account",
+            "type": {
+              "displayName": ["AccountId"],
+              "type": 2
+            }
+          }
+        ],
+        "default": false,
+        "docs": ["Add an authorized account (admin only)"],
+        "label": "add_authorized_account",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": ["ink", "MessageResult"],
+          "type": 7
+        },
+        "selector": "0x..."
+      },
+      {
+        "args": [
+          {
+            "label": "account",
+            "type": {
+              "displayName": ["AccountId"],
+              "type": 2
+            }
+          }
+        ],
+        "default": false,
+        "docs": ["Remove an authorized account (admin only)"],
+        "label": "remove_authorized_account",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": ["ink", "MessageResult"],
+          "type": 7
+        },
+        "selector": "0x..."
+      },
+      {
+        "args": [
+          {
+            "label": "account",
+            "type": {
+              "displayName": ["AccountId"],
+              "type": 2
+            }
+          }
+        ],
+        "default": false,
+        "docs": ["Check if an account is authorized"],
+        "label": "is_authorized",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": ["bool"],
+          "type": 8
+        },
+        "selector": "0x..."
+      },
+      {
+        "args": [],
+        "default": false,
+        "docs": ["Get the contract admin"],
+        "label": "get_admin",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": ["AccountId"],
+          "type": 2
+        },
+        "selector": "0x..."
+      }
+    ]
+  },
+  "types": [
+    {
+      "id": 0,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 1
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 4
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 1
+          },
+          {
+            "name": "E",
+            "type": 4
+          }
+        ],
+        "path": ["Result"]
+      }
+    },
+    {
+      "id": 1,
+      "type": {
+        "def": {
+          "primitive": "u128"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "type": 3,
+                "typeName": "[u8; 32]"
+              }
+            ]
+          }
+        },
+        "path": ["ink_primitives", "types", "AccountId"]
+      }
+    },
+    {
+      "id": 3,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "Created"
+              },
+              {
+                "index": 1,
+                "name": "Shipped"
+              },
+              {
+                "index": 2,
+                "name": "InTransit"
+              },
+              {
+                "index": 3,
+                "name": "Received"
+              },
+              {
+                "index": 4,
+                "name": "Inspected"
+              },
+              {
+                "index": 5,
+                "name": "Verified"
+              },
+              {
+                "index": 6,
+                "name": "Delivered"
+              }
+            ]
+          }
+        },
+        "path": ["polka_trace", "EventType"]
+      }
+    }
+  ],
+  "version": "4"
+} 
